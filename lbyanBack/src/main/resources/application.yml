@@ -4,7 +4,7 @@ spring:
     url: jdbc:mysql://129.204.226.230:3306/lbyan?useUnicode=true&characterEncoding=utf8
     driverClassName: com.mysql.jdbc.Driver
     username: root
-    password: duan
+    password: 6789@jkl
     type: com.alibaba.druid.pool.DruidDataSource
 # #   数据源其他配置
     initialSize: 5
@@ -23,3 +23,6 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: 20
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+logging:
+  config:
+    classpath:log4j2.xml
