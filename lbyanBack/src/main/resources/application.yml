@@ -1,10 +1,11 @@
 # application.yml文件中数据库配置
 spring:
   datasource:
-    url: jdbc:mysql://129.204.226.230:3306/lbyan?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://129.204.226.230:3306/db_lbyan?useUnicode=true&characterEncoding=utf8
     driverClassName: com.mysql.jdbc.Driver
     username: root
     password: 6789@jkl
+    #password:duan
     type: com.alibaba.druid.pool.DruidDataSource
 # #   数据源其他配置
     initialSize: 5
@@ -23,6 +24,30 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: 20
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+  redis:
+    host: 129.204.226.230
+    port: 6379
+    max-wait: 30000 #连接池最大阻塞等待时间（使用负值没有限制）
+    max-active: 100 #最大连接数
+    max-idle: 20 # 最大空闲连接
+    min-idle: 0 # 最小空闲连接
+    timeout: 3000 #连接超时
+    password: 6789@jkl
+  mail:
+    host: smtp.163.com #SMTP服务器地址
+    username: 18242097520@163.com #登陆账号
+    password: lyp82nlf #登陆密码（或授权码）
+    properties:
+      from: 18242097520@163.com #邮件发信人（即真实邮箱）
+  thymeleaf:
+    cache: false
+    prefix: classpath:/views/
+  servlet:
+    multipart:
+      max-file-size: 10MB #限制单个文件大小
+      max-request-size: 50MB #限制请求总量
+    
 logging:
   config:
     classpath:log4j2.xml
+  
