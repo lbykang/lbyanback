@@ -16,7 +16,7 @@ public interface LjxxMapper {
      * @param bthrDOList 被谈话人批量插入
      */
     @Select(" select C_ID AS id, c_pid as pid,c_url as url ,c_img as img,c_sfyx as sfyx,c_mc as mc,c_jj as jj "
-            + " from T_LJXX")
+            + " from T_LbyBack_Ljxx")
     public List<Ljxx> getAllLjxx();
 
     /**
